@@ -1,0 +1,142 @@
+/* ===== GLOBAL ===== */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== MAIN CARD ===== */
+
+.app-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 650px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ===== FILE INPUT ===== */
+
+.upload-box input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f8f9fc;
+    border: 2px dashed #4e73df;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.file-label:hover {
+    background: #e2e6f7;
+}
+
+/* ===== BUTTON ===== */
+
+.primary-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #2e59d9;
+}
+
+/* ===== CHAT SECTION ===== */
+
+.chat-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chat-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* ===== RESPONSE BOX ===== */
+
+.response-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fc;
+    border-radius: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+/* ===== LOADER ===== */
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4e73df;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .chat-box {
+        flex-direction: column;
+    }
+}

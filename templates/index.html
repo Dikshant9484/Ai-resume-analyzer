@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div class="card">
+
+        <h1>🚀 AI Resume Analyzer</h1>
+        <p class="subtitle">Upload your resume and get intelligent insights powered by Groq</p>
+
+        <!-- Upload Section -->
+        <div class="upload-box">
+            <label for="resumeFile" class="file-label">
+                📄 Choose Resume (PDF)
+            </label>
+            <input type="file" id="resumeFile" accept=".pdf">
+            <button onclick="uploadResume()" class="primary-btn">
+                Upload Resume
+            </button>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-box">
+            <input type="text" id="question" placeholder="Ask something about your resume...">
+            <button onclick="askQuestion()" class="primary-btn">
+                Ask AI
+            </button>
+        </div>
+
+        <!-- Loader -->
+        <div id="loading" class="loader hidden"></div>
+
+        <!-- Response -->
+        <div id="responseBox" class="response-box"></div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
